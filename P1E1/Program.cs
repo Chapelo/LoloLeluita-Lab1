@@ -55,7 +55,8 @@ namespace P1E1
                 Console.ReadKey();
 
             } // while
-            
+
+            _bandera = true;
         }
     }
 }
