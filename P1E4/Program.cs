@@ -51,34 +51,94 @@ namespace P1E4
                         Console.Write("\nIngrese el tercero: ");
                         if (decimal.TryParse(Console.ReadLine(), out _num3))
                         {
-                            if (_num1 > _num2 && _num1 > _num3)
+                            if (_num1 == _num2 && _num1 == _num3)
                             {
-                                //Console.WriteLine("El primer numero ingresado es el mayor.");
-                                Console.WriteLine($"\nEl numero {_num1} es mayor que {_num2} y {_num3}.");
-                                Console.WriteLine("\nPresione una tecla para reiniciar");
+                                Console.WriteLine("\nPor favor ingrese numeros distintos.\nPresione una tacla para continuar.");
                             }
 
-                            else
+                            else if (_num1 == _num2 && _num1 != _num3)
                             {
-                                if (_num2 > _num1 && _num2 > _num3)
+                                if (_num1 > _num3)
                                 {
-                                    //Console.WriteLine("El segundo numero ingresado es el mayor.");
-                                    Console.WriteLine($"\nEl numero {_num2} es mayor que {_num1} y {_num3}.");
-                                    Console.WriteLine("\nPresione una tecla para reiniciar");
+                                    Console.WriteLine($"\nEl numero {_num1} es mayor que {_num3}");
+                                    Console.WriteLine("\nPresione una tecla para reiniciar.");
                                 }
 
                                 else
                                 {
-                                    if (_num3 > _num1 && _num3 > _num2)
+                                    Console.WriteLine($"\nEl numero {_num3} es mayor que {_num1}");
+                                    Console.WriteLine("\nPresione una tecla para reiniciar.");
+
+                                } // if
+
+                            } // else if
+                            
+                            else if (_num2 == _num3 && _num2 != _num1)
+                            {
+                                if (_num2 > _num1)
+                                {
+                                    Console.WriteLine($"\nEl numero {_num2} es mayor que {_num1}");
+                                    Console.WriteLine("\nPresione una tecla para reiniciar.");
+                                }
+
+                                else
+                                {
+                                    Console.WriteLine($"\nEl numero {_num1} es mayor que {_num2}");
+                                    Console.WriteLine("\nPresione una tecla para reiniciar.");
+
+                                } // if
+
+                            } // else if
+                            
+                            else if (_num3 == _num1 && _num3 != _num2)
+                            {
+                                if (_num3 > _num2)
+                                {
+                                    Console.WriteLine($"\nEl numero {_num3} es mayor que {_num2}");
+                                    Console.WriteLine("\nPresione una tecla para reiniciar.");
+                                }
+
+                                else
+                                {
+                                    Console.WriteLine($"\nEl numero {_num2} es mayor que {_num3}");
+                                    Console.WriteLine("\nPresione una tecla para reiniciar.");
+
+                                } // if
+
+                            } // else if
+                            
+                            else
+                            {
+                                if (_num1 > _num2 && _num1 > _num3)
+                                {
+                                    //Console.WriteLine("El primer numero ingresado es el mayor.");
+                                    Console.WriteLine($"\nEl numero {_num1} es mayor que {_num2} y {_num3}.");
+                                    Console.WriteLine("\nPresione una tecla para reiniciar.");
+                                }
+                                
+                                else
+                                {
+                                    if (_num2 > _num1 && _num2 > _num3)
                                     {
-                                        //Console.WriteLine("El tercer numero ingresado es el mayor.");
-                                        Console.WriteLine($"\nEl numero {_num3} es mayor que {_num1} y {_num2}.");
-                                        Console.WriteLine("\nPresione una tecla para reiniciar");
+                                        //Console.WriteLine("El segundo numero ingresado es el mayor.");
+                                        Console.WriteLine($"\nEl numero {_num2} es mayor que {_num1} y {_num3}.");
+                                        Console.WriteLine("\nPresione una tecla para reiniciar.");
+                                    }
+
+                                    else
+                                    {
+                                        if (_num3 > _num1 && _num3 > _num2)
+                                        {
+                                            //Console.WriteLine("El tercer numero ingresado es el mayor.");
+                                            Console.WriteLine($"\nEl numero {_num3} es mayor que {_num1} y {_num2}.");
+                                            Console.WriteLine("\nPresione una tecla para reiniciar.");
+
+                                        } // if
 
                                     } // if
 
                                 } // if
-                                
+
                             } // if
                             
                         }
@@ -110,8 +170,9 @@ namespace P1E4
                 Console.ReadKey();
 
             } // while
-            
-            
+
+            _bandera = true;
+
         }
     }
 }

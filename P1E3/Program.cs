@@ -67,7 +67,7 @@ namespace P1E3
                 }
                 else
                 {
-                    Console.WriteLine("\n ERROR: Por favor ingrese un caracter numerico valido.");
+                    Console.WriteLine("\nERROR: Por favor ingrese un caracter numerico valido.");
                     Console.WriteLine("\nPresione una tecla para reiniciar");
 
                 } // if
@@ -75,7 +75,8 @@ namespace P1E3
                 Console.ReadKey();
 
             } // while
-            
+
+            _bandera = true;
         }
     }
 }

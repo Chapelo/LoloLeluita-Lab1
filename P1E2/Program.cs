@@ -73,6 +73,7 @@ namespace P1E2
 
             } // while
 
+            _bandera = true;
         }
     }
 }
