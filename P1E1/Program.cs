@@ -42,17 +42,22 @@ namespace P1E1
                     _superficie = _base * (_base * 3) / 2;
 
                     Console.WriteLine($"\nLa superficie del triangulo rectangulo, cuya altura es el triple de su base, es {_superficie}.");
-                    Console.WriteLine("\nPrecione una tecla para reiniciar");
+                    Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                    Console.WriteLine("\nPrecione una tecla para reiniciar.");
                 }
                 
                 else
                 {
                     Console.WriteLine("\nERROR: Ingrese un caracter numerico valido, intentelo de nuevo.");
-                    Console.WriteLine("\nPrecione una tecla para reiniciar");
+                    Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                    Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                 } // if
-                
-                Console.ReadKey();
+
+                if (Console.ReadKey().Key == ConsoleKey.Escape)
+                {
+                    Environment.Exit(0);
+                }
 
             } // while
 

@@ -68,11 +68,15 @@ namespace P1E3
                 else
                 {
                     Console.WriteLine("\nERROR: Por favor ingrese un caracter numerico valido.");
-                    Console.WriteLine("\nPresione una tecla para reiniciar");
+                    Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                    Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                 } // if
-                
-                Console.ReadKey();
+
+                if (Console.ReadKey().Key == ConsoleKey.Escape)
+                {
+                    Environment.Exit(0);
+                }
 
             } // while
 

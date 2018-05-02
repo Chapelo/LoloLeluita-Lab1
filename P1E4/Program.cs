@@ -61,13 +61,15 @@ namespace P1E4
                                 if (_num1 > _num3)
                                 {
                                     Console.WriteLine($"\nEl numero {_num1} es mayor que {_num3}");
-                                    Console.WriteLine("\nPresione una tecla para reiniciar.");
+                                    Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                                    Console.WriteLine("\nPrecione una tecla para reiniciar.");
                                 }
 
                                 else
                                 {
                                     Console.WriteLine($"\nEl numero {_num3} es mayor que {_num1}");
-                                    Console.WriteLine("\nPresione una tecla para reiniciar.");
+                                    Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                                    Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                                 } // if
 
@@ -78,13 +80,15 @@ namespace P1E4
                                 if (_num2 > _num1)
                                 {
                                     Console.WriteLine($"\nEl numero {_num2} es mayor que {_num1}");
-                                    Console.WriteLine("\nPresione una tecla para reiniciar.");
+                                    Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                                    Console.WriteLine("\nPrecione una tecla para reiniciar.");
                                 }
 
                                 else
                                 {
                                     Console.WriteLine($"\nEl numero {_num1} es mayor que {_num2}");
-                                    Console.WriteLine("\nPresione una tecla para reiniciar.");
+                                    Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                                    Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                                 } // if
 
@@ -95,13 +99,15 @@ namespace P1E4
                                 if (_num3 > _num2)
                                 {
                                     Console.WriteLine($"\nEl numero {_num3} es mayor que {_num2}");
-                                    Console.WriteLine("\nPresione una tecla para reiniciar.");
+                                    Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                                    Console.WriteLine("\nPrecione una tecla para reiniciar.");
                                 }
 
                                 else
                                 {
                                     Console.WriteLine($"\nEl numero {_num2} es mayor que {_num3}");
-                                    Console.WriteLine("\nPresione una tecla para reiniciar.");
+                                    Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                                    Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                                 } // if
 
@@ -113,7 +119,8 @@ namespace P1E4
                                 {
                                     //Console.WriteLine("El primer numero ingresado es el mayor.");
                                     Console.WriteLine($"\nEl numero {_num1} es mayor que {_num2} y {_num3}.");
-                                    Console.WriteLine("\nPresione una tecla para reiniciar.");
+                                    Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                                    Console.WriteLine("\nPrecione una tecla para reiniciar.");
                                 }
                                 
                                 else
@@ -122,7 +129,8 @@ namespace P1E4
                                     {
                                         //Console.WriteLine("El segundo numero ingresado es el mayor.");
                                         Console.WriteLine($"\nEl numero {_num2} es mayor que {_num1} y {_num3}.");
-                                        Console.WriteLine("\nPresione una tecla para reiniciar.");
+                                        Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                                        Console.WriteLine("\nPrecione una tecla para reiniciar.");
                                     }
 
                                     else
@@ -131,7 +139,8 @@ namespace P1E4
                                         {
                                             //Console.WriteLine("El tercer numero ingresado es el mayor.");
                                             Console.WriteLine($"\nEl numero {_num3} es mayor que {_num1} y {_num2}.");
-                                            Console.WriteLine("\nPresione una tecla para reiniciar.");
+                                            Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                                            Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                                         } // if
 
@@ -146,7 +155,8 @@ namespace P1E4
                         else
                         {
                             Console.WriteLine("\nERROR: Ingrese un caracter numerico valido.");
-                            Console.WriteLine("\nPresione una tecla para reiniciar");
+                            Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                            Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                         } //if
                     }
@@ -154,7 +164,8 @@ namespace P1E4
                     else
                     {
                         Console.WriteLine("\nERROR: Ingrese un caracter numerico valido.");
-                        Console.WriteLine("\nPresione una tecla para reiniciar");
+                        Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                        Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                     } // if
 
@@ -163,11 +174,15 @@ namespace P1E4
                 else
                 {
                     Console.WriteLine("\nERROR: Ingrese un caracter numerico valido.");
-                    Console.WriteLine("\nPresione una tecla para reiniciar");
+                    Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                    Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                 } // if
-                
-                Console.ReadKey();
+
+                if (Console.ReadKey().Key == ConsoleKey.Escape)
+                {
+                    Environment.Exit(0);
+                }
 
             } // while
 
