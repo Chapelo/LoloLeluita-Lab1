@@ -1,0 +1,7 @@
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E9\obj\Debug\P1E9.csprojResolveAssemblyReference.cache
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E9\obj\Debug\P1E9.csproj.CoreCompileInputs.cache
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E9\bin\Debug\P1E9.exe.config
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E9\bin\Debug\P1E9.exe
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E9\bin\Debug\P1E9.pdb
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E9\obj\Debug\P1E9.exe
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E9\obj\Debug\P1E9.pdb
