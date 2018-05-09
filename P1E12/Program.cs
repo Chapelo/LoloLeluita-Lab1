@@ -9,14 +9,14 @@ using System.Threading.Tasks;
  * Laboratorio 1 Com. 2
  * 
  * Trabajo Pactico:     N° 1
- * Ejercicio:           N° 9
+ * Ejercicio:           N° 12
  * 
  * Appelido y nombre:   Chiappelo Bruno
  * DNI:                 40217247
  * 
  */
 
-namespace P1E9
+namespace P1E12
 {
     class Program
     {
@@ -28,54 +28,44 @@ namespace P1E9
 
 
             // Variables
-            double _base = 0;
-            double _exponente = 0;
-            double _resultado = 0;
+            int _numero = 0;
 
-            bool _bandera = false;
+            bool _cerrarPrograma = false;
 
 
             // Operaciones
-            _exponente = 0;
-            _base = 2;
-            _resultado = _base;
-
-            while (_bandera == false)
+            while (_cerrarPrograma == false)
             {
                 Console.Clear();
-                Console.Write("Ingrese la potencia que desea para elevar el numero 2: ");
+                Console.Write("Ingrese un numero par para conocer sus anteriores pares: ");
 
-                if (double.TryParse(Console.ReadLine(), out _exponente))
+                if (int.TryParse(Console.ReadLine(), out _numero) && _numero % 2 == 0)
                 {
-                    if (_exponente > 0)
+                    if (_numero > 0)
                     {
-                        _resultado = Math.Pow(_base, _exponente);
+                        Console.WriteLine($"\nLos numeros pares anteriores son:");
+                        for (int _i = _numero; _i >= 2; _i -= 2)
+                        {
+                            Console.WriteLine($"\n{_i}");
 
-                        Console.WriteLine($"\nEl resultado de {_base} elevado a la potencia {_exponente} es: {_resultado}.");
-                        Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
-                        Console.WriteLine("\nPrecione una tecla para reiniciar.");
-                    }
-                    
-                    else if (_exponente == 0)
-                    {
-                        Console.WriteLine($"\nEl resultado de {_base} elevado a la potencia {_exponente} es: 1.");
+                        } // for
+
                         Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
                         Console.WriteLine("\nPrecione una tecla para reiniciar.");
                     }
 
-                    else if (_exponente < 0)
+                    else if (_numero < 0)
                     {
-                        Console.WriteLine($"\nERROR: Usted ingreso un numero negativo, por favor ingrese un numero positivo.");
+                        Console.WriteLine("\nERROR: Usted ingreso un numero negativo, por favor ingrese un numero positivo.");
                         Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
                         Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                     } // if
-
                 }
 
                 else
                 {
-                    Console.WriteLine("\nERROR: Ingrese un caracter numerico valido.");
+                    Console.WriteLine("\nERROR: Introduzca un caracter numerico valido.");
                     Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
                     Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
@@ -84,10 +74,10 @@ namespace P1E9
                 if (Console.ReadKey().Key == ConsoleKey.Escape)
                 {
                     Environment.Exit(0);
-                }
+
+                } // if
 
             } // while
-            
         }
     }
 }

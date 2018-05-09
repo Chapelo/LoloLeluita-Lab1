@@ -40,16 +40,20 @@ namespace P1E7
                 Console.Write("Ingrese un numero para saber si es par o impar: ");
                 if (decimal.TryParse(Console.ReadLine(), out _numero))
                 {
-                    if (_numero == 0)
+                    if (_numero < 0)
                     {
-                        Console.WriteLine("\nEl numero ingresado es 0.");
+                        Console.WriteLine("\nEl numero ingresado es impar.");
+                        Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                        Console.WriteLine("\nPrecione una tecla para reiniciar.");
                     }
 
-                    else
+                    else if (_numero > 0)
                     {
                         if (_numero % 2 == 0)
                         {
                             Console.WriteLine("\nEl numero ingresado es par.");
+                            Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                            Console.WriteLine("\nPrecione una tecla para reiniciar.");
                         }
 
                         else
@@ -57,30 +61,41 @@ namespace P1E7
                             if (_numero % 2 != 0)
                             {
                                 Console.WriteLine("\nEl numero ingresado es impar.");
+                                Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                                Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                             } // if
 
                         } // if
+                    }
+
+                    else if (_numero == 0)
+                    {
+                        Console.WriteLine("\nEl numero ingresado es 0.");
+                        Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                        Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                     } // if
-                    
                 }
 
                 else
                 {
-                    Console.WriteLine("\nERROR: Ingrese un caracter numerico valido.\nPresione una tecla para reiniciar");
+                    Console.WriteLine("\nERROR: Ingrese un caracter numerico valido.");
+                    Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                    Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                 } // if
 
-                Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
-                Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                 if (Console.ReadKey().Key == ConsoleKey.Escape)
                 {
                     Environment.Exit(0);
-                }
+
+                } // if
 
             } // while
+
+            Console.ReadKey();
         }
     }
 }

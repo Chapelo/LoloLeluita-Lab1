@@ -53,7 +53,7 @@ namespace P1E11
                         {
                             if (_exponente < 0)
                             {
-                                Console.WriteLine($"\nERROR: Usted ingreso un numero negativo, por favor ingrese un numero positivo.");
+                                Console.WriteLine("\nERROR: Usted ingreso un numero negativo, por favor ingrese un numero positivo.");
                                 Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
                                 Console.WriteLine("\nPrecione una tecla para reiniciar.");
                             }
@@ -105,7 +105,7 @@ namespace P1E11
 
                     else if (_base < 0)
                     {
-                        Console.WriteLine($"\nERROR: Usted ingreso un numero negativo, por favor ingrese un numero positivo.");
+                        Console.WriteLine("\nERROR: Usted ingreso un numero negativo, por favor ingrese un numero positivo.");
                         Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
                         Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
