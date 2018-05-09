@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 /*
  * Universidad Tecnologica Nacional
@@ -46,21 +42,24 @@ namespace P1E3
                     if (_numero == 0)
                     {
                         Console.WriteLine($"\nEl numero {_numero} es neutro.");
-                        Console.WriteLine("\nPresione una tecla para reiniciar");
+                        Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                        Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                     } // if
 
                     if (_numero < 0)
                     {
                         Console.WriteLine($"\nEl numero {_numero} es negativo.");
-                        Console.WriteLine("\nPresione una tecla para reiniciar");
+                        Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                        Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                     } // if
 
                     if (_numero > 0)
                     {
                         Console.WriteLine($"\nEl numero {_numero} es positivo.");
-                        Console.WriteLine("\nPresione una tecla para reiniciar");
+                        Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                        Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
                     } // if
 

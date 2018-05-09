@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 /*
  * Universidad Tecnologica Nacional
@@ -45,21 +41,47 @@ namespace P1E2
 
                 if (decimal.TryParse(Console.ReadLine(), out _base))
                 {
-                    Console.Write("\nIntroduzca la altura: ");
-
-                    if (decimal.TryParse(Console.ReadLine(), out _altura))
+                    if (_base < 0)
                     {
-                        _superficie = (_base * _altura) / 2;
-                        _perimetro = ((_base * 2) + (_altura * 2));
-                        Console.WriteLine($"\nEl perimetro es {_perimetro} y la superficie {_superficie}");
-                        Console.WriteLine("\nPrecione una tecla para reiniciar");
+                        Console.WriteLine("\nERROR: Usted ingreso un numero negativo, por favor ingrese un numero positivo.");
+                        Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                        Console.WriteLine("\nPrecione una tecla para reiniciar.");
                     }
+
                     else
                     {
-                        Console.WriteLine("\nERROR: Por favor introduzca un caracter numerico valido.");
-                        Console.WriteLine("\nPrecione una tecla para reiniciar");
+                        Console.Write("\nIntroduzca la altura: ");
+
+                        if (decimal.TryParse(Console.ReadLine(), out _altura))
+                        {
+                            if (_altura < 0)
+                            {
+                                Console.WriteLine("\nERROR: Usted ingreso un numero negativo, por favor ingrese un numero positivo.");
+                                Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                                Console.WriteLine("\nPrecione una tecla para reiniciar.");
+                            }
+
+                            else
+                            {
+                                _superficie = (_base * _altura) / 2;
+                                _perimetro = ((_base * 2) + (_altura * 2));
+                                Console.WriteLine($"\nEl perimetro es {_perimetro} y la superficie {_superficie}");
+                                Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                                Console.WriteLine("\nPrecione una tecla para reiniciar.");
+
+                            } // if
+                        }
+
+                        else
+                        {
+                            Console.WriteLine("\nERROR: Por favor introduzca un caracter numerico valido.");
+                            Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                            Console.WriteLine("\nPrecione una tecla para reiniciar.");
+
+                        } // if
 
                     } // if
+                    
 
                 }
                 else

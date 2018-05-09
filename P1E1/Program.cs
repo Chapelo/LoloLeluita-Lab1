@@ -39,11 +39,23 @@ namespace P1E1
 
                 if (decimal.TryParse(Console.ReadLine(), out _base))
                 {
-                    _superficie = _base * (_base * 3) / 2;
+                    if (_base < 0)
+                    {
+                        Console.WriteLine("\nERROR: Usted ingreso un numero negativo, por favor ingrese un numero positivo.");
+                        Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                        Console.WriteLine("\nPrecione una tecla para reiniciar.");
+                    }
 
-                    Console.WriteLine($"\nLa superficie del triangulo rectangulo, cuya altura es el triple de su base, es {_superficie}.");
-                    Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
-                    Console.WriteLine("\nPrecione una tecla para reiniciar.");
+                    else
+                    {
+                        _superficie = _base * (_base * 3) / 2;
+
+                        Console.WriteLine($"\nLa superficie del triangulo rectangulo, cuya altura es el triple de su base, es {_superficie}.");
+                        Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
+                        Console.WriteLine("\nPrecione una tecla para reiniciar.");
+
+                    } // if
+
                 }
                 
                 else
