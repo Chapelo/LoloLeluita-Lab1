@@ -1,25 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-/*
- * Tecnicatura Superior En Programacion
- * Laboratorio 1 Com. 2
- * 
- * Trabajo Pactico:     N° 1
- * Ejercicio:           N° 20
- * 
- * Appelido y nombre:   Chiappelo Bruno
- * DNI:                 40217247
- * 
- */
 
 namespace P1E20
 {
     class Program
     {
+        /*
+         * Tecnicatura Superior En Programacion
+         * Laboratorio 1 Com. 2
+         * 
+         * Trabajo Pactico:     N° 1
+         * Ejercicio:           N° 20
+         * 
+         * Appelido y nombre:   Chiappelo Bruno
+         * DNI:                 40217247
+         * 
+         */
+
         static void Main(string[] args)
         {
             // Color De Consola

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace P1E19
+namespace P1E24
 {
     class Program
     {
@@ -9,7 +9,7 @@ namespace P1E19
          * Laboratorio 1 Com. 2
          * 
          * Trabajo Pactico:     N° 1
-         * Ejercicio:           N° 19
+         * Ejercicio:           N° 24
          * 
          * Appelido y nombre:   Chiappelo Bruno
          * DNI:                 40217247
@@ -24,10 +24,19 @@ namespace P1E19
 
 
             // Variables
-            int _segundos = 0;
-            int _minutos = 0;
-            int _horas = 0;
-            int _auxSegundos = 0;
+            decimal _base = 0m;
+            decimal _altura = 0m;
+            decimal _perimetro = 0m;
+
+            decimal _cantidadPostes = 0m;
+            decimal _precioPoste = 8m;
+            decimal _precioPosteFinal = 0m;
+
+            decimal _cantidadAlambre = 0m;
+            decimal _precioAlambre = 0.8m;
+            decimal _precioAlambreFinal = 0m;
+
+            decimal _precioFinal = 0m;
 
             bool _cerrarPrograma = false;
 
@@ -37,22 +46,31 @@ namespace P1E19
             {
                 Console.Clear();
 
-                Console.Write("Ingrese los Segundos que desea convertir a Horas - Minutos - Segundos: ");
-                if (int.TryParse(Console.ReadLine(), out _segundos))
+                Console.Write("Ingrese la base del terreno en metros: ");
+                if (decimal.TryParse(Console.ReadLine(), out _base) && _base > 0)
                 {
-                    if (_segundos > 0)
+                    Console.Write("\nIngrese la altura del terreno en metros: ");
+                    if (decimal.TryParse(Console.ReadLine(), out _altura) && _altura > 0)
                     {
-                        _horas = _segundos / 3600;
-                        _minutos = ((_segundos - _horas * 3600) / 60);
-                        _auxSegundos = _segundos - (_horas * 3600 + _minutos * 60);
-                        Console.WriteLine($"\n {_segundos} segundos, equivale a {_horas} hora(s) ; {_minutos} minuto(s) ; {_auxSegundos} segundo(s).");
+                        _perimetro = (_base * 2) + (_altura * 2);
+
+                        _cantidadAlambre = _perimetro * 5;
+                        _precioAlambreFinal = _cantidadAlambre * _precioAlambre;
+
+                        _cantidadPostes = _perimetro / 2;
+                        _precioPosteFinal = _cantidadPostes * _precioPoste;
+
+                        _precioFinal = _precioPosteFinal + _precioAlambreFinal;
+                        
+                        Console.WriteLine($"\nSe necesitan {_cantidadPostes} postes, {_cantidadAlambre} Mts. de alambre.\nCosto Total = {_precioFinal}");
+
                         Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
                         Console.WriteLine("\nPrecione una tecla para reiniciar.");
                     }
 
-                    else if (_segundos < 0)
+                    else
                     {
-                        Console.WriteLine("\nERROR: Usted ingreso un numero negativo, por favor ingrese un numero positivo.");
+                        Console.WriteLine("\nERROR: Introduzca un caracter numerico valido.");
                         Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
                         Console.WriteLine("\nPrecione una tecla para reiniciar.");
 
@@ -73,7 +91,7 @@ namespace P1E19
 
                 } // if
 
-            } // while
+            } // While
         }
     }
 }
