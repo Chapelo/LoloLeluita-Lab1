@@ -1,0 +1,6 @@
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E17\bin\Debug\P1E17.exe.config
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E17\bin\Debug\P1E17.exe
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E17\bin\Debug\P1E17.pdb
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E17\obj\Debug\P1E17.csproj.CoreCompileInputs.cache
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E17\obj\Debug\P1E17.exe
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E17\obj\Debug\P1E17.pdb

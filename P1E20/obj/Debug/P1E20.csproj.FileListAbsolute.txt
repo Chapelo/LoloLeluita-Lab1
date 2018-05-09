@@ -1,0 +1,7 @@
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E20\obj\Debug\P1E20.csprojResolveAssemblyReference.cache
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E20\obj\Debug\P1E20.csproj.CoreCompileInputs.cache
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E20\bin\Debug\P1E20.exe.config
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E20\bin\Debug\P1E20.exe
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E20\bin\Debug\P1E20.pdb
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E20\obj\Debug\P1E20.exe
+C:\Users\Ch4pP\source\repos\Laboratrio1\P1E20\obj\Debug\P1E20.pdb
