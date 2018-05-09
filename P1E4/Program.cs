@@ -1,25 +1,23 @@
 ﻿using System;
 
-/*
- * Tecnicatura Superior En Programacion
- * Laboratorio 1 Com. 2
- * 
- * Trabajo Pactico:     N° 1
- * Ejercicio:           N° 4
- * 
- * Appelido y nombre:   Chiappelo Bruno
- * DNI:                 40217247
- * 
- */
-
-
 namespace P1E4
 {
     class Program
     {
+        /*
+         * Tecnicatura Superior En Programacion
+         * Laboratorio 1 Com. 2
+         * 
+         * Trabajo Pactico:     N° 1
+         * Ejercicio:           N° 4
+         * 
+         * Appelido y nombre:   Chiappelo Bruno
+         * DNI:                 40217247
+         * 
+         */
+
         static void Main(string[] args)
         {
-
             // Color De Consola
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.Green;
