@@ -22,20 +22,30 @@ namespace P1E28
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.Green;
 
+
+
+
+
+
+
+
+
+
+
             // Variables
+            int _cantidadProducto = 0;
+            int _opcionDeObraSocial = 0;
             int _contadorGalvez = 0;
             int _contadorOsde = 0;
             int _contadorSinObraSocial = 0;
-            int _cantidadProducto = 0;
-            int _opcionDeObraSocial = 0;
             
+            decimal _precioProducto = 0;
+            decimal _subTotal = 0;
+            decimal _Descuento = 0;
+            decimal _porcentajeDescuento = 0;
             decimal _totalGalvez = 0m;
             decimal _totalOsde = 0m;
             decimal _totalSinObraSocial = 0m;
-            decimal _precioProducto = 0;
-            decimal _subTotal = 0;
-            decimal _montoDescuento = 0;
-            decimal _porcentajeDescuento = 0;
 
             string _nuevaVenta = "S";
             bool _validacion = false;
@@ -49,7 +59,7 @@ namespace P1E28
                 _validacion = false;
                 while (!_validacion)
                 {
-                    Console.Write("Ingrese el monto del producto: ");
+                    Console.Write("Ingrese el monto del producto:\t");
                     if (decimal.TryParse(Console.ReadLine(), out _precioProducto) && _precioProducto > 0)
                     {
                         _validacion = true;
@@ -61,7 +71,7 @@ namespace P1E28
                 _validacion = false;
                 while (!_validacion)
                 {
-                    Console.Write("\nIngrese la cantidad del producto: ");
+                    Console.Write("\nIngrese la cantidad del producto:\t");
                     if (int.TryParse(Console.ReadLine(), out _cantidadProducto) && _cantidadProducto > 0)
                     {
                         _validacion = true;
@@ -73,7 +83,7 @@ namespace P1E28
                 _validacion = false;
                 while (!_validacion)
                 {
-                    Console.Write("\nIngrese la opcion de venta [1- GALVEZ / 2- OSDE / 3- SIN OBRA SOCIAL]:  ");
+                    Console.Write("\nIngrese la opcion de venta [1- GALVEZ / 2- OSDE / 3- SIN OBRA SOCIAL]:\t");
                     if (int.TryParse(Console.ReadLine(), out _opcionDeObraSocial) && _opcionDeObraSocial >0 && _opcionDeObraSocial <= 3)
                     {
                         _validacion = true;
@@ -85,36 +95,42 @@ namespace P1E28
                 switch (_opcionDeObraSocial)
                 {
                     case 1:
+
                         _porcentajeDescuento = 0.20m;
                         _subTotal = (_precioProducto * _cantidadProducto);
-                        _montoDescuento = (_subTotal * _porcentajeDescuento);
+                        _Descuento = (_subTotal * _porcentajeDescuento);
 
-                        _totalGalvez += (_subTotal - _montoDescuento);
+                        _totalGalvez += (_subTotal - _Descuento);
                         _contadorGalvez++;
-                        break;
+
+                        break; // case 1
 
                     case 2:
+
                         _porcentajeDescuento = 0.30m;
                         _subTotal = (_precioProducto * _cantidadProducto);
-                        _montoDescuento = (_subTotal * _porcentajeDescuento);
+                        _Descuento = (_subTotal * _porcentajeDescuento);
 
-                        _totalOsde += (_subTotal - _montoDescuento);
+                        _totalOsde += (_subTotal - _Descuento);
                         _contadorOsde++;
-                        break;
+
+                        break; // case 2
 
                     case 3:
 
                         _totalSinObraSocial += (_precioProducto * _cantidadProducto);
                         _contadorSinObraSocial++;
-                        break;
+
+                        break; // case 3
 
                     default:
-                        break;
+
+                        break; // case defalt
 
                 } // switch
 
 
-                Console.Write("\nPara agregar mas pescado presione [S].\nPara terminar presione cualquier tecla.");
+                Console.Write("\nPara agregar mas productos presione [S].\nPara terminar presione cualquier tecla.");
                 _nuevaVenta = Console.ReadLine();
             }
 
@@ -122,12 +138,12 @@ namespace P1E28
 
             Console.Clear();
 
-            Console.WriteLine($"\n\tTotal Galvez: ${_totalGalvez} - Cant. Ventas: {_contadorGalvez}");
-            Console.WriteLine($"\tTotal Osde: ${_totalOsde} - Cant. Ventas: {_contadorOsde}");
-            Console.WriteLine($"\tTotal Sin Obra Social: ${_totalSinObraSocial} - Cant. Ventas: {_contadorSinObraSocial}");
+            Console.WriteLine($"\n\tTotal Galvez: ${_totalGalvez} - Cantidad de Ventas: {_contadorGalvez}");
+            Console.WriteLine($"\tTotal Osde: ${_totalOsde} - Cantidad de Ventas: {_contadorOsde}");
+            Console.WriteLine($"\tTotal Sin Obra Social: ${_totalSinObraSocial} - Cantidad de Ventas: {_contadorSinObraSocial}");
 
             
-            Console.WriteLine("\nPrecione una tecla para cerrar el programa.");
+            Console.WriteLine("\nPresione una tecla para cerrar el programa.");
             Console.ReadKey();
             
         }

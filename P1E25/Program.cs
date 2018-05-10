@@ -62,26 +62,32 @@ namespace P1E25
                 if (decimal.TryParse(Console.ReadLine(), out _celsius) && _celsius >= 0)
                 {
                     _fahrenheit = conversor(_celsius);
+
                     if (_fahrenheit > 85)
                     {
                         _deporte = "Natacion";
                     }
-                    else if (_fahrenheit > 70 && _fahrenheit <= 85)
-                    {
-                        _deporte = "Tenis";
-                    }
+
                     else if (_fahrenheit > 35 && _fahrenheit <= 70)
                     {
                         _deporte = "Golf";
                     }
+
                     else if (_fahrenheit > 32 && _fahrenheit <= 35)
                     {
                         _deporte = "Esqui";
                     }
+
+                    else if (_fahrenheit > 70 && _fahrenheit <= 85)
+                    {
+                        _deporte = "Tenis";
+                    }
+
                     else
                     {
                         _deporte = "otros deportes";
-                    }
+
+                    } // if
                     
                     Console.WriteLine($"\nLa temperatura de {_fahrenheit} grados Fahrenheit es ideal para realizar {_deporte}.");
                     Console.WriteLine("\n\nPresione Escape (esc) para cerrar el programa.");
@@ -98,7 +104,7 @@ namespace P1E25
 
                 if (Console.ReadKey().Key == ConsoleKey.Escape)
                 {
-                    Environment.Exit(0);
+                    _cerrarPrograma = true;
 
                 } // if
 
