@@ -68,7 +68,7 @@ namespace P1E14
 
                 if (Console.ReadKey().Key == ConsoleKey.Escape)
                 {
-                    Environment.Exit(0);
+                    _cerrarPrograma = true;
 
                 } // if
 
