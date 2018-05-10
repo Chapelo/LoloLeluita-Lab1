@@ -69,7 +69,7 @@ namespace P1E12
 
                 if (Console.ReadKey().Key == ConsoleKey.Escape)
                 {
-                    Environment.Exit(0);
+                    _cerrarPrograma = true;
 
                 } // if
 

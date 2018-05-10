@@ -29,11 +29,11 @@ namespace P1E11
             decimal _resultado = 0m;
             int _contador = 0;
 
-            bool _bandera = false;
+            bool _cerrarPrograma = false;
 
 
             // Operaciones
-            while (_bandera == false)
+            while (_cerrarPrograma == false)
             {
                 _contador = 1;
 
@@ -127,12 +127,11 @@ namespace P1E11
 
                 if (Console.ReadKey().Key == ConsoleKey.Escape)
                 {
-                    Environment.Exit(0);
+                    _cerrarPrograma = true;
                 }
 
             } // while
 
-            _bandera = true;
 
         }
 

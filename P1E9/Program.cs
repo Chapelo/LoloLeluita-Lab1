@@ -28,7 +28,7 @@ namespace P1E9
             double _exponente = 0;
             double _resultado = 0;
 
-            bool _bandera = false;
+            bool _cerrarPrograma = false;
 
 
             // Operaciones
@@ -36,7 +36,7 @@ namespace P1E9
             _base = 2;
             _resultado = _base;
 
-            while (_bandera == false)
+            while (_cerrarPrograma == false)
             {
                 Console.Clear();
                 Console.Write("Ingrese la potencia que desea para elevar el numero 2: ");
@@ -79,7 +79,7 @@ namespace P1E9
 
                 if (Console.ReadKey().Key == ConsoleKey.Escape)
                 {
-                    Environment.Exit(0);
+                    _cerrarPrograma = true;
                 }
 
             } // while

@@ -25,11 +25,11 @@ namespace P1E7
 
             // Variables
             decimal _numero = 0m;
-            bool _bandera = false;
+            bool _cerrarPrograma = false;
 
 
             // Operaciones
-            while (_bandera == false)
+            while (_cerrarPrograma == false)
             {
                 Console.Clear();
 
@@ -85,13 +85,11 @@ namespace P1E7
 
                 if (Console.ReadKey().Key == ConsoleKey.Escape)
                 {
-                    Environment.Exit(0);
+                    _cerrarPrograma = true;
 
                 } // if
 
             } // while
-
-            Console.ReadKey();
         }
     }
 }
