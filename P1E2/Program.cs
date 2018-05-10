@@ -29,11 +29,11 @@ namespace P1E2
             decimal _altura = 0m;
             decimal _superficie = 0m;
             decimal _perimetro = 0m;
-            bool _bandera = false;
+            bool _cerrarPrograma = false;
             
 
             // Operaciones
-            while(_bandera == false)
+            while(_cerrarPrograma == false)
             {
                 Console.Clear();
 
@@ -94,12 +94,10 @@ namespace P1E2
 
                 if (Console.ReadKey().Key == ConsoleKey.Escape)
                 {
-                    Environment.Exit(0);
+                    _cerrarPrograma = true;
                 }
 
             } // while
-
-            _bandera = true;
         }
     }
 }

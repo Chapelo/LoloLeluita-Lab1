@@ -27,11 +27,11 @@ namespace P1E4
             decimal _num1 = 0m;
             decimal _num2 = 0m;
             decimal _num3 = 0m;
-            bool _bandera = false;
+            bool _cerrarPrograma = false;
 
 
             // Operaciones
-            while (_bandera == false) 
+            while (_cerrarPrograma == false) 
             {
                 Console.Clear();
 
@@ -214,14 +214,11 @@ namespace P1E4
 
                 if (Console.ReadKey().Key == ConsoleKey.Escape)
                 {
-                    Environment.Exit(0);
-                }
+                    _cerrarPrograma = true;
+
+                } // if
 
             } // while
-
-            _bandera = true;
-
-            Console.ReadKey();
         }
     }
 }
