@@ -45,6 +45,7 @@ namespace P1E19
                         _horas = _segundos / 3600;
                         _minutos = ((_segundos - _horas * 3600) / 60);
                         _auxSegundos = _segundos - (_horas * 3600 + _minutos * 60);
+
                         Console.WriteLine($"\n {_segundos} segundos, equivale a {_horas} hora(s) ; {_minutos} minuto(s) ; {_auxSegundos} segundo(s).");
                         Console.WriteLine("\nPresione Escape (esc) para cerrar el programa.");
                         Console.WriteLine("\nPrecione una tecla para reiniciar.");
@@ -69,7 +70,7 @@ namespace P1E19
 
                 if (Console.ReadKey().Key == ConsoleKey.Escape)
                 {
-                    Environment.Exit(0);
+                    _cerrarPrograma = true;
 
                 } // if
 
